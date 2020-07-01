@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -28,4 +28,31 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+</style> -->
+
+
+<!--  ****************************************************************************  -->
+
+<template>
+  <div id="app">
+    <app-header />
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+  import Header from './components/header/header.vue'
+  export default {
+    name: 'app',
+    components: {
+      'app-header': Header
+    }
+  }
+</script>
+
+<style>
+  body, html {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 </style>
