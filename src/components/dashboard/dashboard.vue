@@ -16,7 +16,8 @@
       }
     },
     created() {
-      axios.get('https://my-axios-vuecli.firebaseio.com/users.json')
+      // axios.get('https://my-axios-vuecli.firebaseio.com/users.json')        // request level configuration
+      axios.get('/users.json')            
       .then(res => {
         console.log(res)
         const data = res.data           // the origin data we get back from axis. Its an object where we have this 'data' object
